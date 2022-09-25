@@ -88,9 +88,6 @@ GEM
     io-console (0.5.11)
     irb (1.4.1)
       reline (>= 0.3.0)
-    jbuilder (2.11.5)
-      actionview (>= 5.0.0)
-      activesupport (>= 5.0.0)
     loofah (2.18.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -128,6 +125,8 @@ GEM
       nio4r (~> 2.0)
     racc (1.6.0)
     rack (2.2.4)
+    rack-cors (1.1.1)
+      rack (>= 2.0.0)
     rack-test (2.0.2)
       rack (>= 1.3)
     rails (7.0.3.1)
@@ -197,9 +196,9 @@ DEPENDENCIES
   bootsnap
   debug
   importmap-rails
-  jbuilder
   mongoid
   puma (~> 5.0)
+  rack-cors
   rails (~> 7.0.3, >= 7.0.3.1)
   sprockets-rails
   stimulus-rails
