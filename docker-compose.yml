@@ -1,0 +1,29 @@
+version: "3.8"
+services:
+  web:
+    container_name: rails_mongodb
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/usr/src/app
+    ports:
+      - "3000:3000"
+    env_file: .env
+    networks:
+      - trandung
+  db:
+    image: mongo:latest
+    container_name: mongodbrails
+    restart: always
+    ports:
+      - '27017:27017'
+    volumes:
+      - mongodb:/data/db
+    networks:
+      - trandung
+volumes:
+    mongodb:
+networks:
+    trandung:
